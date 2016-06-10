@@ -1,0 +1,156 @@
+15:38:22 [main]      [DEBUG] NetworkUtils -Found free port 4622.
+15:38:35 [main]      [DEBUG] Connection -Peer successfully created and connected.
+15:39:07 [main]      [DEBUG] DataManager -Get. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:39:07 [pool-5-thre[DEBUG] FutureGetListener -Got null. 'location key = 'aneesh' content key = 'USER_LOCATIONS' '
+15:39:07 [main]      [DEBUG] ProcessComponent -Executing 'Register Process'.
+15:39:07 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.register.CheckIsUserRegisteredStep'.
+15:39:07 [main]      [DEBUG] DataManager -Get. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:39:07 [pool-5-thre[DEBUG] FutureGetListener -Got null. 'location key = 'aneesh' content key = 'USER_LOCATIONS' '
+15:39:07 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.register.UserProfileCreationStep'.
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'Async[org.hive2hive.core.processes.register.PutUserProfileStep]'.
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'Async[org.hive2hive.core.processes.register.PutLocationsStep]'.
+15:39:08 [async execu[DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.register.PutUserProfileStep'.
+15:39:08 [async execu[DEBUG] PutUserProfileStep -Start encrypting the user profile of the new user aneesh
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'Async[org.hive2hive.core.processes.register.PutPublicKeyStep]'.
+15:39:08 [async execu[DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.register.PutLocationsStep'.
+15:39:08 [async execu[DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.register.PutPublicKeyStep'.
+15:39:08 [async execu[DEBUG] DataManager -Put. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '1' based on key = '0' ttl = '63072000' protected = 'true' 
+15:39:08 [async execu[DEBUG] DataManager -Put. content = 'UserPublicKey' location key = 'aneesh' content key = 'USER_PUBLIC_KEY' ttl = '63072000' protected = 'true' 
+15:39:08 [async execu[DEBUG] PutUserProfileStep -User profile successfully encrypted. Start putting it...
+15:39:08 [async execu[DEBUG] DataManager -Put. content = 'EncryptedNetworkContent' location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' version key = '1' based on key = '0' ttl = '63072000' protected = 'true' 
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'Login Process'.
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.SessionCreationStep'.
+15:39:08 [UP queue]  [DEBUG] DataManager -Get digest (latest). location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:39:08 [UP queue]  [DEBUG] FutureDigestListener -Got digest. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:39:08 [UP queue]  [DEBUG] DataManager -Get latest version. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:39:08 [main]      [ERROR] FileUtil -Cannot deserialize meta data. Reason: File 'C:\Users\anees\AppData\Local\Temp\H2H-Cache\h2h.conf' does not exist
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.GetLocationsStep'.
+15:39:08 [main]      [DEBUG] DataManager -Get digest (latest). location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:39:08 [pool-5-thre[DEBUG] FutureDigestListener -Got digest. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:39:08 [main]      [DEBUG] DataManager -Get latest version. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.ContactOtherClientsStep'.
+15:39:08 [main]      [DEBUG] ContactOtherClientsStep -Waiting for at most 10000ms for the response of other clients
+15:39:08 [main]      [DEBUG] ContactOtherClientsStep -Adding own peeraddress to locations file: paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false)
+15:39:08 [main]      [DEBUG] ContactOtherClientsStep -Current locations: Locations [userId=aneesh, addresses=[paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false), ]]
+15:39:08 [main]      [DEBUG] ContactOtherClientsStep -Node is master and needs to handle possible User Profile Tasks.
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.PutLocationsStep'.
+15:39:08 [main]      [DEBUG] DataManager -Put. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '2' based on key = '1' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:39:08 [pool-5-thre[DEBUG] DataManager -Confirm. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '2' based on key = '1' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'User Profile Task Process'.
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.common.userprofiletask.GetUserProfileTaskStep'.
+15:39:08 [main]      [DEBUG] GetUserProfileTaskStep -Get the next user profile task of user 'aneesh'.
+15:39:08 [pool-5-thre[DEBUG] FutureGetListener -Got null. 'location key = 'aneesh' domain key = 'USER-PROFILE-TASK' content key = '0x' '
+15:39:08 [main]      [WARN ] GetUserProfileTaskStep -Did not get an user profile task. User ID = 'aneesh'.
+15:39:08 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.userprofiletask.HandleUserProfileTaskStep'.
+15:39:08 [main]      [DEBUG] HandleUserProfileTaskStep -No more user profile tasks in queue. Stopping handling. User ID = 'aneesh'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'New File Process'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.ValidateFileStep'.
+15:40:42 [main]      [DEBUG] ValidateFileStep -File readme.txt is a 'small file'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.CheckWriteAccessStep'.
+15:40:42 [main]      [DEBUG] CheckWriteAccessStep -Check write access in folder 'H2H_aneesh_1463220547951' for file 'readme.txt'.
+15:40:42 [UP queue]  [DEBUG] DataManager -Get digest (latest). location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:42 [pool-5-thre[DEBUG] FutureDigestListener -Got digest. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:42 [UP queue]  [DEBUG] AESEncryptedVersionManager -No need for getting from network. Returning cached version. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:42 [main]      [DEBUG] CheckWriteAccessStep -Write access check for file readme.txt has been passed.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.add.CreateFileKeysStep'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.InitializeChunksStep'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.PutSingleChunkStep'.
+15:40:42 [main]      [DEBUG] PutSingleChunkStep -Uploading chunk 0 of file readme.txt.
+15:40:42 [main]      [DEBUG] DataManager -Put. content = 'HybridEncryptedContent' location key = '8519ee00-f081-4fc9-a39a-0d64a9744aa1' content key = 'FILE_CHUNK' ttl = '15552000' protected = 'true' hashFlag = 'true'
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.add.CreateMetaFileStep'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.PutMetaFileStep'.
+15:40:42 [main]      [DEBUG] DataManager -Put. content = 'HybridEncryptedContent' location key = '30820122300D06092A864886F70D01010105000382010F003082010A0282010100C0831C15253D1FD617DFCEB5FFEBC91FB309013F32AA746F428E0CC1389C84A68CF0DAAC6B1A33A73AD2AC6C3812FC1A84198ABDAA1F037B2851FB8F50CC0F37CB29F14E8B3980B7423D345E1BA1A5BC7BDC8989EF926A1369A767CA86D6883AF58564DA653E366BC82FD8FE30B9A0CA4ADECD649974331362A35E3CEE7BDC805FC9867CF6ED02D36903E37105526437EE34EEF381C1C315997082BFD413E729A593772C7D8A81192EAC12931A1D9BC6784A13ADC5FC4177CAA20F5B090DCD52D6F757AFDCBA6AC6058EC3DD16F8981E1955A8449602C31B19440672F92579617BD89908C8A6FF957A11FC66E0354EDEAFB42CF48D7B74177C8342E575A42B7B0203010001' content key = 'META_FILE' version key = '1' based on key = '0' ttl = '31536000' protected = 'true' hashFlag = 'true'
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'Process Component ID: 0e2c8e0a-7c78-4628-bddd-3b9b1a4aca7b'.
+15:40:42 [UP queue]  [DEBUG] DataManager -Get digest (latest). location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:42 [pool-5-thre[DEBUG] FutureDigestListener -Got digest. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:42 [UP queue]  [DEBUG] AESEncryptedVersionManager -No need for getting from network. Returning cached version. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:42 [UP queue]  [DEBUG] DataManager -Put. content = 'EncryptedNetworkContent' location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' version key = '2' based on key = '1' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:40:42 [pool-5-thre[DEBUG] DataManager -Confirm. content = 'EncryptedNetworkContent' location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' version key = '2' based on key = '1' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.files.add.PrepareAddNotificationStep'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'Notification Process'.
+15:40:42 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.notify.VerifyNotificationFactoryStep'.
+15:40:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.notify.GetPublicKeysStep'.
+15:40:43 [main]      [DEBUG] GetPublicKeysStep -Start getting public keys from 1 user(s).
+15:40:43 [main]      [DEBUG] PublicKeyManager -Requested to get the public key of user 'aneesh'.
+15:40:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.notify.PutAllUserProfileTasksStep'.
+15:40:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.notify.GetAllLocationsStep'.
+15:40:43 [main]      [DEBUG] GetAllLocationsStep -Starting to get all locations from the users to be notified.
+15:40:43 [main]      [DEBUG] DataManager -Get. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:40:43 [pool-5-thre[DEBUG] FutureGetListener -Got result = 'Locations'. 'location key = 'aneesh' content key = 'USER_LOCATIONS' '
+15:40:43 [main]      [DEBUG] GetAllLocationsStep -Sending notifications to 1 users: 
+15:40:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.notify.SendNotificationsMessageStep'.
+15:40:43 [main]      [DEBUG] SendNotificationsMessageStep -Notifying 0 other clients of same user (without myself).
+15:40:48 [main]      [DEBUG] ProcessComponent -Executing 'File List Process'.
+15:40:48 [UP queue]  [DEBUG] DataManager -Get digest (latest). location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:48 [pool-5-thre[DEBUG] FutureDigestListener -Got digest. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:40:48 [UP queue]  [DEBUG] AESEncryptedVersionManager -No need for getting from network. Returning cached version. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:41:43 [main]      [DEBUG] DataManager -Get. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:41:43 [pool-5-thre[DEBUG] FutureGetListener -Got result = 'Locations'. 'location key = 'aneesh' content key = 'USER_LOCATIONS' '
+15:41:43 [main]      [DEBUG] ProcessComponent -Executing 'Login Process'.
+15:41:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.SessionCreationStep'.
+15:41:43 [UP queue]  [DEBUG] DataManager -Get digest (latest). location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:41:43 [pool-5-thre[DEBUG] FutureDigestListener -Got digest. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:41:43 [UP queue]  [DEBUG] DataManager -Get latest version. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:41:43 [main]      [ERROR] FileUtil -Cannot deserialize meta data. Reason: File 'C:\Users\anees\AppData\Local\Temp\H2H-Cache\h2h.conf' does not exist
+15:41:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.GetLocationsStep'.
+15:41:43 [main]      [DEBUG] DataManager -Get digest (latest). location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:41:43 [pool-5-thre[DEBUG] FutureDigestListener -Got digest. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:41:43 [main]      [DEBUG] DataManager -Get latest version. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:41:43 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.ContactOtherClientsStep'.
+15:41:43 [main]      [DEBUG] ContactOtherClientsStep -Waiting for at most 10000ms for the response of other clients
+15:41:53 [main]      [DEBUG] ContactOtherClientsStep -Adding own peeraddress to locations file: paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false)
+15:41:53 [main]      [DEBUG] ContactOtherClientsStep -Current locations: Locations [userId=aneesh, addresses=[paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false), ]]
+15:41:53 [main]      [DEBUG] ContactOtherClientsStep -Node is master and needs to handle possible User Profile Tasks.
+15:41:53 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.PutLocationsStep'.
+15:41:53 [main]      [DEBUG] DataManager -Put. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '3' based on key = '2' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:41:53 [pool-5-thre[DEBUG] DataManager -Confirm. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '3' based on key = '2' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:41:53 [main]      [DEBUG] ProcessComponent -Executing 'User Profile Task Process'.
+15:41:53 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.common.userprofiletask.GetUserProfileTaskStep'.
+15:41:53 [main]      [DEBUG] GetUserProfileTaskStep -Get the next user profile task of user 'aneesh'.
+15:41:53 [pool-5-thre[DEBUG] FutureGetListener -Got null. 'location key = 'aneesh' domain key = 'USER-PROFILE-TASK' content key = '0x' '
+15:41:53 [main]      [WARN ] GetUserProfileTaskStep -Did not get an user profile task. User ID = 'aneesh'.
+15:41:53 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.userprofiletask.HandleUserProfileTaskStep'.
+15:41:53 [main]      [DEBUG] HandleUserProfileTaskStep -No more user profile tasks in queue. Stopping handling. User ID = 'aneesh'.
+15:43:06 [main]      [DEBUG] NetworkUtils -Found free port 4623.
+15:43:15 [main]      [DEBUG] Connection -Peer successfully created and connected.
+15:43:15 [main]      [DEBUG] Connection -Discovery successful. Outside address is '/192.168.42.189'.
+15:43:15 [main]      [DEBUG] Connection -Bootstrapping successful. Bootstrapped to '192.168.42.189'.
+15:43:22 [main]      [DEBUG] DataManager -Get. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:43:22 [NETTY-TOMP2[DEBUG] FutureGetListener -Got result = 'Locations'. 'location key = 'aneesh' content key = 'USER_LOCATIONS' '
+15:43:22 [main]      [DEBUG] ProcessComponent -Executing 'Login Process'.
+15:43:22 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.SessionCreationStep'.
+15:43:23 [UP queue]  [DEBUG] DataManager -Get digest (latest). location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:43:23 [NETTY-TOMP2[DEBUG] FutureDigestListener -Got digest. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:43:23 [UP queue]  [DEBUG] DataManager -Get latest version. location key = 'FBC3CCD1A38A94C77010692F50F96481CE757F58439A9F59' content key = 'USER_PROFILE' 
+15:43:23 [main]      [ERROR] FileUtil -Cannot deserialize meta data. Reason: File 'C:\Users\anees\AppData\Local\Temp\H2H-Cache\h2h.conf' does not exist
+15:43:23 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.GetLocationsStep'.
+15:43:23 [main]      [DEBUG] DataManager -Get digest (latest). location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:43:23 [NETTY-TOMP2[DEBUG] FutureDigestListener -Got digest. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:43:23 [main]      [DEBUG] DataManager -Get latest version. location key = 'aneesh' content key = 'USER_LOCATIONS' 
+15:43:23 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.ContactOtherClientsStep'.
+15:43:23 [main]      [DEBUG] ContactOtherClientsStep -Sending contact message to check for aliveness to paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false)
+15:43:23 [main]      [DEBUG] ContactOtherClientsStep -Waiting for at most 10000ms for the response of other clients
+15:43:23 [Thread-4]  [DEBUG] PublicKeyManager -Requested to get the public key of user 'aneesh'.
+15:43:23 [Thread-4]  [DEBUG] MessageReplyHandler -Message signature from user 'aneesh' verified. Node ID = 'bc71a5cd-04f8-4458-a615-b484c1c8ad33'.
+15:43:23 [Thread-4]  [DEBUG] MessageReplyHandler -Received and accepted the message. Node ID = 'bc71a5cd-04f8-4458-a615-b484c1c8ad33'.
+15:43:23 [Thread-3]  [DEBUG] MessageManager -Message (direct) sent. Message ID = '1j21pf6v14gp', Target address = 'paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false)', Sender address = 'paddr[0x4c6226bee0c243712afc47d2b2a70b36d8679374[/192.168.42.189,4623]]/relay(false)/slow(false)'.
+15:43:23 [Thread-5]  [DEBUG] ContactPeerMessage -Published login event of user aneesh with new client paddr[0x4c6226bee0c243712afc47d2b2a70b36d8679374[/192.168.42.189,4623]]/relay(false)/slow(false)
+15:43:23 [Thread-5]  [DEBUG] ContactPeerMessage -Sending a contact peer response message. Requesting address = 'paddr[0x4c6226bee0c243712afc47d2b2a70b36d8679374[/192.168.42.189,4623]]/relay(false)/slow(false)'.
+15:43:23 [Thread-6]  [DEBUG] PublicKeyManager -Requested to get the public key of user 'aneesh'.
+15:43:23 [Thread-6]  [DEBUG] MessageReplyHandler -Message signature from user 'aneesh' verified. Node ID = '6dc5e265-0c6f-4eff-97f1-a738bf3c5fb1'.
+15:43:23 [Thread-6]  [DEBUG] MessageReplyHandler -Received and accepted the message. Node ID = '6dc5e265-0c6f-4eff-97f1-a738bf3c5fb1'.
+15:43:23 [Thread-5]  [DEBUG] MessageManager -Message (direct) sent. Message ID = '1j21pf6v14gp', Target address = 'paddr[0x4c6226bee0c243712afc47d2b2a70b36d8679374[/192.168.42.189,4623]]/relay(false)/slow(false)', Sender address = 'paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false)'.
+15:43:23 [Thread-7]  [DEBUG] ContactOtherClientsStep -Received valid response from paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false)
+15:43:23 [main]      [DEBUG] ContactOtherClientsStep -Adding own peeraddress to locations file: paddr[0x4c6226bee0c243712afc47d2b2a70b36d8679374[/192.168.42.189,4623]]/relay(false)/slow(false)
+15:43:23 [main]      [DEBUG] ContactOtherClientsStep -Current locations: Locations [userId=aneesh, addresses=[paddr[0x57e550222053bf02c51523f0329ec79229595660[/192.168.42.189,4622]]/relay(false)/slow(false), paddr[0x4c6226bee0c243712afc47d2b2a70b36d8679374[/192.168.42.189,4623]]/relay(false)/slow(false), ]]
+15:43:23 [main]      [DEBUG] ContactOtherClientsStep -Node is master and needs to handle possible User Profile Tasks.
+15:43:23 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.login.PutLocationsStep'.
+15:43:23 [main]      [DEBUG] DataManager -Put. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '4' based on key = '3' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:43:23 [NETTY-TOMP2[DEBUG] DataManager -Confirm. content = 'Locations' location key = 'aneesh' content key = 'USER_LOCATIONS' version key = '4' based on key = '3' ttl = '63072000' protected = 'true' prepareFlag = 'true'
+15:43:23 [main]      [DEBUG] ProcessComponent -Executing 'User Profile Task Process'.
+15:43:23 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.common.userprofiletask.GetUserProfileTaskStep'.
+15:43:23 [main]      [DEBUG] GetUserProfileTaskStep -Get the next user profile task of user 'aneesh'.
+15:43:23 [NETTY-TOMP2[DEBUG] FutureGetListener -Got null. 'location key = 'aneesh' domain key = 'USER-PROFILE-TASK' content key = '0x' '
+15:43:23 [main]      [WARN ] GetUserProfileTaskStep -Did not get an user profile task. User ID = 'aneesh'.
+15:43:23 [main]      [DEBUG] ProcessComponent -Executing 'org.hive2hive.core.processes.userprofiletask.HandleUserProfileTaskStep'.
+15:43:23 [main]      [DEBUG] HandleUserProfileTaskStep -No more user profile tasks in queue. Stopping handling. User ID = 'aneesh'.

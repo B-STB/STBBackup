@@ -1,0 +1,6 @@
+net\tomp2p\message\Encoder$1.class
+net\tomp2p\message\Decoder$1.class
+net\tomp2p\connection\Sender$10.class
+net\tomp2p\peers\IP$1.class
+net\tomp2p\storage\Data$1.class
+net\tomp2p\storage\AlternativeCompositeByteBuf$1.class

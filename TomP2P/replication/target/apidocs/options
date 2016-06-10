@@ -1,0 +1,28 @@
+-classpath
+'F:/Work/DishSettop/git/TomP2P/replication/target/classes;C:/Users/anees/.m2/repository/io/netty/netty-common/4.0.32.Final/netty-common-4.0.32.Final.jar;F:/Work/DishSettop/git/TomP2P/core/target/tomp2p-core-5.0-Beta9-SNAPSHOT.jar;C:/Users/anees/.m2/repository/io/netty/netty-transport/4.0.32.Final/netty-transport-4.0.32.Final.jar;C:/Users/anees/.m2/repository/io/netty/netty-buffer/4.0.32.Final/netty-buffer-4.0.32.Final.jar;C:/Users/anees/.m2/repository/org/projectlombok/lombok/1.16.6/lombok-1.16.6.jar;C:/Users/anees/.m2/repository/ch/qos/logback/logback-core/1.0.1/logback-core-1.0.1.jar;F:/Work/DishSettop/git/TomP2P/dht/target/tomp2p-dht-5.0-Beta9-SNAPSHOT.jar;C:/Users/anees/.m2/repository/ch/qos/logback/logback-classic/1.0.1/logback-classic-1.0.1.jar;C:/Users/anees/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'F:/Work/DishSettop/git/TomP2P/replication/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2016. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'F:/Work/DishSettop/git/TomP2P/replication/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'TomP2P Replication 5.0-Beta9-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/7/docs/api' 'F:/Work/DishSettop/git/TomP2P/replication/target/javadoc-bundle-options'
+-linkoffline
+'http://tomp2p.net/tomp2p-core/apidocs' 'F:/Work/DishSettop/git/TomP2P/core/target/apidocs'
+-linkoffline
+'http://tomp2p.net/tomp2p-dht/apidocs' 'F:/Work/DishSettop/git/TomP2P/dht/target/apidocs'
+-use
+-version
+-windowtitle
+'TomP2P Replication 5.0-Beta9-SNAPSHOT API'

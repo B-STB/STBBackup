@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.4.jar" sourcepath="C:/Users/anees/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/config-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/el-api-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/fst-2.23.jar" sourcepath="C:/Users/anees/.m2/repository/de/ruedigermoeller/fst/2.23/fst-2.23-sources.jar"/>
+	<classpathentry kind="lib" path="lib/gcm-server-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="lib/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/logback-classic-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/logback-core-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/mbassador-1.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/objenesis-2.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/weupnp-0.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/netty-buffer-4.0.36.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-common-4.0.36.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-transport-4.0.36.Final.jar"/>
+	<classpathentry kind="lib" path="lib/org.hive2hive.client-1.2.3-SNAPSHOT.jar" sourcepath="oldlibs/org.hive2hive.client-1.2.3-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="lib/org.hive2hive.processframework-1.2-SNAPSHOT.jar" sourcepath="oldlibs/org.hive2hive.processframework-1.2-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-client-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-core-5.0-Beta9-SNAPSHOT.jar" sourcepath="oldlibs/tomp2p-core-5.0-Beta9-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-dht-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-nat-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-replication-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-social-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-storage-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/tomp2p-tracker-5.0-Beta9-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk15on-154.jar"/>
+	<classpathentry kind="lib" path="lib/org.hive2hive.core-1.2.3-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

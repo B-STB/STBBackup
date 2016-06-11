@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project H2H with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value=".."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/h2h"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/stbcontroller.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.stb.main.Main"/>
+            </manifest>
+            <fileset dir="bin"/>
+        </jar>
+        <delete dir="${dir.jarfile}/lib"/>
+        <mkdir dir="${dir.jarfile}/lib"/>
+        <copy todir="${dir.jarfile}/lib">
+        	<fileset dir="lib"/>
+    	</copy>
+    </target>
+</project>

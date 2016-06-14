@@ -6,11 +6,6 @@ import java.net.UnknownHostException;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-import net.tomp2p.nat.PeerBuilderNAT;
-import net.tomp2p.peers.PeerAddress;
-import net.tomp2p.peers.PeerSocketAddress;
-import net.tomp2p.peers.PeerSocketAddress.PeerSocket4Address;
-
 import org.hive2hive.client.ConsoleClient;
 import org.hive2hive.client.console.H2HConsoleMenu;
 import org.hive2hive.client.console.H2HConsoleMenuItem;
@@ -27,6 +22,10 @@ import org.hive2hive.core.security.H2HDefaultEncryption;
 import org.hive2hive.core.serializer.FSTSerializer;
 import org.hive2hive.core.serializer.IH2HSerialize;
 import org.hive2hive.core.serializer.JavaSerializer;
+
+import net.tomp2p.nat.PeerBuilderNAT;
+import net.tomp2p.peers.PeerAddress;
+import net.tomp2p.peers.PeerSocketAddress.PeerSocket4Address;
 
 /**
  * The network configuration menu of the {@link ConsoleClient}.

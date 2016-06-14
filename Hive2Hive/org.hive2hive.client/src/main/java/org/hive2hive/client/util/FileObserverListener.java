@@ -1,6 +1,8 @@
 package org.hive2hive.client.util;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.monitor.FileAlterationListener;
 import org.apache.commons.io.monitor.FileAlterationObserver;
@@ -27,10 +29,17 @@ public class FileObserverListener implements FileAlterationListener {
 	private final IFileBuffer deleteFileBuffer;
 	private final ModifyFileBuffer modifyFileBuffer;
 
-	public FileObserverListener(IFileManager fileManager) {
+	private List<String> ignoreList;
+
+	public FileObserverListener(IFileManager fileManager, List<String> ignoreList) {
 		this.addFileBuffer = new AddFileBuffer(fileManager);
 		this.deleteFileBuffer = new DeleteFileBuffer(fileManager);
 		this.modifyFileBuffer = new ModifyFileBuffer(fileManager);
+		this.ignoreList = ignoreList;
+	}
+	
+	public FileObserverListener(IFileManager fileManager) {
+		this (fileManager, new ArrayList<String>());
 	}
 
 	@Override
@@ -40,6 +49,9 @@ public class FileObserverListener implements FileAlterationListener {
 
 	@Override
 	public void onDirectoryCreate(File directory) {
+		if (checkIgnoreList(directory)) {
+			return;
+		}
 		printFileDetails("created", directory);
 		addFileBuffer.addFileToBuffer(directory);
 	}
@@ -51,18 +63,37 @@ public class FileObserverListener implements FileAlterationListener {
 
 	@Override
 	public void onDirectoryDelete(File directory) {
+		if (checkIgnoreList(directory)) {
+			return;
+		}
 		printFileDetails("deleted", directory);
 		deleteFileBuffer.addFileToBuffer(directory);
 	}
 
 	@Override
 	public void onFileCreate(File file) {
+		if (checkIgnoreList(file)) {
+			return;
+		}
 		printFileDetails("created", file);
 		addFileBuffer.addFileToBuffer(file);
 	}
 
+	private boolean checkIgnoreList(File file) {
+		for (String ignorePattern : ignoreList) {
+			if (file.getName().matches(ignorePattern)) {
+				logger.debug("Ignoring file: {}", file);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	@Override
 	public void onFileChange(File file) {
+		if (checkIgnoreList(file)) {
+			return;
+		}
 		if (file.isFile()) {
 			printFileDetails("changed", file);
 			modifyFileBuffer.addFileToBuffer(file);
@@ -71,6 +102,9 @@ public class FileObserverListener implements FileAlterationListener {
 
 	@Override
 	public void onFileDelete(File file) {
+		if (checkIgnoreList(file)) {
+			return;
+		}
 		printFileDetails("deleted", file);
 		deleteFileBuffer.addFileToBuffer(file);
 	}

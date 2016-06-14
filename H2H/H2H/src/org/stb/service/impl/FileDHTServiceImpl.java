@@ -1,8 +1,8 @@
 package org.stb.service.impl;
 
 import java.io.File;
-import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -20,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.stb.service.FileDHTService;
 import org.stb.util.FileUtils;
+import org.stb.util.PropertyReader;
 
 public class FileDHTServiceImpl implements FileDHTService {
 
@@ -52,7 +53,9 @@ public class FileDHTServiceImpl implements FileDHTService {
 	public FileObserver startObserver(IH2HNode node, File root) throws Exception {
 		// TODO get root and Interval from props
 		FileObserver fileObserver = new FileObserver(root);
-		FileObserverListener listener = new FileObserverListener(node.getFileManager());
+		String ignoreVals = PropertyReader.getValue("stb.ignoreList");
+		List<String> ignoreList = Arrays.asList(ignoreVals.split(","));
+		FileObserverListener listener = new FileObserverListener(node.getFileManager(), ignoreList);
 		fileObserver.addFileObserverListener(listener);
 
 		fileObserver.start();
